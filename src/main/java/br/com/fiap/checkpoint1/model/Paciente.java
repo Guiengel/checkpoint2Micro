@@ -1,7 +1,10 @@
 package br.com.fiap.checkpoint1.model;
 
+<<<<<<< HEAD
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+=======
+>>>>>>> d91dacf70910bd0a4fa6dae0571ec8a1098cc0f5
 
 public class Paciente {
 
@@ -11,9 +14,12 @@ public class Paciente {
     private String bairro;
     private String email;
     private String telefone_completo;
+<<<<<<< HEAD
     private LocalDate data_nascimento;
     private LocalDateTime criado_as;
     private LocalDateTime atualizado_as;
+=======
+>>>>>>> d91dacf70910bd0a4fa6dae0571ec8a1098cc0f5
 
     public Long getId(){
         return id;
@@ -63,6 +69,7 @@ public class Paciente {
         this.telefone_completo = telefone_completo;
     }
 
+<<<<<<< HEAD
     public LocalDate getData_nascimento() {
         return data_nascimento;
     }
@@ -87,4 +94,6 @@ public class Paciente {
         this.atualizado_as = atualizado_as;
     }
 
+=======
+>>>>>>> d91dacf70910bd0a4fa6dae0571ec8a1098cc0f5
 }
