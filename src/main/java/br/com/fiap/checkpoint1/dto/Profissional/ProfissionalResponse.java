@@ -9,7 +9,7 @@ public class ProfissionalResponse {
     private Long id;
     private String nome;
     private BigDecimal valor_hora;
-
+    private String especialidade;
     private LocalDateTime criado_as;
     private LocalDateTime atualizado_as;
 
@@ -17,6 +17,7 @@ public class ProfissionalResponse {
         this.setId(profissional.getId());
         this.setNome(profissional.getNome());
         this.setValor_hora(profissional.getValor_hora());
+        this.setEspecialidade(profissional.getEspecialidade());
         this.setCriado_as(profissional.getCriado_as());
         this.setAtualizado_as(profissional.getAtualizado_as());
         return this;
@@ -37,6 +38,15 @@ public class ProfissionalResponse {
     }
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+
+
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
     }
 
     public BigDecimal getValor_hora() {

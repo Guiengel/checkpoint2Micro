@@ -15,6 +15,7 @@ public class Profissional {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
+    private String especialidade;
     private BigDecimal valor_hora;
     private LocalDateTime criado_as;
     private LocalDateTime atualizado_as;
@@ -31,6 +32,14 @@ public class Profissional {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getEspecialidade() {
+        return especialidade;
+    }
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
+    }
+    
     public BigDecimal getValor_hora() {
         return valor_hora;
     }

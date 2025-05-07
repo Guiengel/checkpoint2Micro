@@ -12,8 +12,6 @@ public class PacienteRequestCreate {
     private String email;
     private String telefone_completo;
     private LocalDate data_nascimento;
-    private LocalDateTime criado_as;
-    private LocalDateTime atualizado_as;
 
 
     public Paciente toModel(){

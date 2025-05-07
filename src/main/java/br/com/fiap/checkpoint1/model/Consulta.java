@@ -14,8 +14,6 @@ public class Consulta {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Integer id_profissional;
-    private Integer id_paciente;
     private LocalDateTime data_consulta;
     private String status_consulta;
     private Integer quantidade_horas;
@@ -29,18 +27,7 @@ public class Consulta {
     public void setId(Long id) {
         this.id = id;
     }
-    public Integer getId_profissional() {
-        return id_profissional;
-    }
-    public void setId_profissional(Integer id_profissional) {
-        this.id_profissional = id_profissional;
-    }
-    public Integer getId_paciente() {
-        return id_paciente;
-    }
-    public void setId_paciente(Integer id_paciente) {
-        this.id_paciente = id_paciente;
-    }
+
     public LocalDateTime getData_consulta() {
         return data_consulta;
     }
