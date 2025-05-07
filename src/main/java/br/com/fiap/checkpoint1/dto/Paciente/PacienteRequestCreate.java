@@ -1,4 +1,9 @@
-package br.com.fiap.checkpoint1.dto;
+package br.com.fiap.checkpoint1.dto.Paciente;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+import br.com.fiap.checkpoint1.model.Paciente;
 
 public class PacienteRequestCreate {
     private String nome;
@@ -6,7 +11,23 @@ public class PacienteRequestCreate {
     private String bairro;
     private String email;
     private String telefone_completo;
+    private LocalDate data_nascimento;
+    private LocalDateTime criado_as;
+    private LocalDateTime atualizado_as;
 
+
+    public Paciente toModel(){
+    
+        Paciente paciente = new Paciente();
+        paciente.setNome(this.nome);
+        paciente.setEndereco(this.endereco);
+        paciente.setBairro(this.bairro);
+        paciente.setEmail(this.email);
+        paciente.setTelefone_Completo(this.telefone_completo);
+        paciente.setData_nascimento(this.data_nascimento);
+        return paciente;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -36,5 +57,12 @@ public class PacienteRequestCreate {
     }
     public void setTelefone_completo(String telefone_completo) {
         this.telefone_completo = telefone_completo;
+    }
+
+    public LocalDate getData_nascimento() {
+        return data_nascimento;
+    }
+    public void setData_nascimento(LocalDate data_nascimento) {
+        this.data_nascimento = data_nascimento;
     }
 }

@@ -1,4 +1,6 @@
-package br.com.fiap.checkpoint1.dto;
+package br.com.fiap.checkpoint1.dto.Paciente;
+
+import br.com.fiap.checkpoint1.model.Paciente;
 
 public class PacienteRequestUpdate {
     private String nome;
@@ -36,5 +38,14 @@ public class PacienteRequestUpdate {
     }
     public void setTelefone_completo(String telefone_completo) {
         this.telefone_completo = telefone_completo;
+    }
+
+    public Paciente toModel(Paciente paciente){
+        paciente.setNome(this.nome);
+        paciente.setEndereco(this.endereco);
+        paciente.setBairro(this.bairro);
+        paciente.setEmail(this.email);
+        paciente.setTelefone_Completo(this.telefone_completo);
+        return paciente;
     }
 }

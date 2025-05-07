@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.fiap.checkpoint1.dto.PacienteRequestCreate;
-import br.com.fiap.checkpoint1.dto.PacienteRequestUpdate;
-import br.com.fiap.checkpoint1.dto.PacienteResponse;
+import br.com.fiap.checkpoint1.dto.Paciente.PacienteRequestCreate;
+import br.com.fiap.checkpoint1.dto.Paciente.PacienteRequestUpdate;
+import br.com.fiap.checkpoint1.dto.Paciente.PacienteResponse;
 import br.com.fiap.checkpoint1.service.PacienteService;
 
 @RestController
@@ -59,7 +59,7 @@ public class PacienteController {
     @GetMapping
     public ResponseEntity<List<PacienteResponse>>findAll(){
         List<PacienteResponse> response =
-            pacienteService.listarTodos().stream()
+            pacienteService.getAll().stream()
             .map (p-> new PacienteResponse().toDto(p))
             .collect(Collectors.toList());
         return ResponseEntity.ok(response);
