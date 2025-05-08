@@ -117,6 +117,9 @@ src/main/resources/application.properties
 
 No terminal, execute:
 
+*Linux/macOS:*
+bash
+
 ```
 docker run -d \
     --name mysql \
@@ -128,11 +131,9 @@ docker run -d \
     mysql
 
 ```
-
-*Linux/macOS:*
-bash
+```
 ./mvnw spring-boot:run
-
+```
 ## 🧪 Funcionalidades da API
 
 - ✅ Cadastro, edição, listagem e remoção de *Pacientes*
