@@ -23,6 +23,8 @@ public class PacienteRequestCreate {
         paciente.setEmail(this.email);
         paciente.setTelefone_Completo(this.telefone_completo);
         paciente.setData_nascimento(this.data_nascimento);
+        paciente.setCriado_as(LocalDateTime.now());
+        paciente.setAtualizado_as(LocalDateTime.now());
         return paciente;
     }
     

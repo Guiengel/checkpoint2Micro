@@ -7,6 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Consulta {
@@ -20,6 +22,14 @@ public class Consulta {
     private BigDecimal valor_consulta;
     private LocalDateTime criado_as;
     private LocalDateTime atualizado_as;
+
+    @ManyToOne
+    @JoinColumn(name = "paciente_id", nullable = false)
+    private Paciente paciente;
+    
+    @ManyToOne
+    @JoinColumn(name = "profissional_id", nullable = false)
+    private Profissional profissional;
     
     public Long getId() {
         return id;
@@ -63,5 +73,21 @@ public class Consulta {
     }
     public void setAtualizado_as(LocalDateTime atualizado_as) {
         this.atualizado_as = atualizado_as;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+    
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+    
+    public Profissional getProfissional() {
+        return profissional;
+    }
+    
+    public void setProfissional(Profissional profissional) {
+        this.profissional = profissional;
     }
 }
