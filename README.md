@@ -39,7 +39,7 @@ Lida com as rotas dos profissionais da saúde (médicos, enfermeiros etc.):
 - PUT /profissionais/{id}  
 - DELETE /profissionais/{id}  
 
-#### ConsultaController.java (se houver)
+#### ConsultaController.java
 Lida com o agendamento e alteração de consultas:
 
 - GET /consultas  
